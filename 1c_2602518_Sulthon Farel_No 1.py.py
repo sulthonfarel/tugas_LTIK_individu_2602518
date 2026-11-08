@@ -79,6 +79,20 @@ while percobaan > 0:
             else:
                 print("Kode barang tidak ditemukan!")
 
+            # Fitur tambahan: Menampilkan seluruh inventaris
+            print("\n===== Seluruh Data Inventaris =====")
+
+            for kode, data in inventaris.items():
+                print(f"{kode} - {data[0]} - Stok: {data[1]}")
+
+            # Fitur tambahan: Menghitung total stok
+            total_stok = 0
+
+            for data in inventaris.values():
+                total_stok += data[1]
+
+            print(f"\nTotal seluruh stok barang: {total_stok}")
+
         else:
             print("Pilihan menu tidak valid!")
 
